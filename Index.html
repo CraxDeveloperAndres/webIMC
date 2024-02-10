@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    
+</head>
+<body>
+    <header>
+        <img src="Images/Logo-50-años.png">
+        <nav class="navegacion">
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de</a>
+        </nav>   
+    </header>
+    <main>
+        <article>
+            <section>
+                <div class="coloreado">
+                    <h2 class="titulo1">Estructura de Datos y Algoritmos 1</h2>
+                    <h1 id="definicion">¿Qué es Frontend?</h1>
+                    <p class="inicio">Pulsar la imagen para ir a la pagina de referencia</p>
+                    <br>
+                    <a href="https://assemblerinstitute.com/blog/backend-vs-frontend/" id="imgR" target="_blank"
+                            rel="noopener noreferrer"><img src="Images/front-end.jpg" alt="Imagen Diseño Front End"></a>
+                    <br>
+                    <p>Hace referencia a la parte <strong>visible o interfaz de una página web o de un programa o aplicación
+                            móvil</strong>;
+                        aquella que verán y interactúan los usuarios que accedan. Más específicamente, hace referencia a <em>los
+                            colores, letras,
+                            animaciones y demás elementos que pueden visualizar los usuarios</em>.
+                    </p>
+                    <!--  Este es un comentario -->
+                    <p>Los 3 Principales lenguajes Frontend en desarrollo web</p>
+                    <ol class="cosos">
+                        <li><strong>HTML</strong> - permite determinar la estructura de la página y del contenido mediante etiquetas.
+                        </li>
+                        <li><strong>CSS</strong> - permite definir el estilo de la página de manera sencilla.</li>
+                        <li><strong>JavaScript</strong> - permitir crear una página web interactiva.</li>
+                    </ol>
+                </div>
+                <br>
+            </section>
+            <section>
+                <h2>HTML</h2>
+                <p>HTML sirve para determinar la estructura de la página y del contenido mediante etiquetas. Es imprescindible dominar
+                    el HTML
+                    para generar una página que se posicione correctamente en buscadores, aunque también sirve para hacerla más
+                    comprensible de
+                    cara a los usuarios. <br><br> <a href="https://es.wikipedia.org/wiki/HTML5" id="imgR" target="_blank" rel="noopener noreferrer">Pulse aquí para ver documentación de HTML5</a>
+                </p>
+                <br>
+                <h2>CSS</h2>
+                <p>Por otro lado, CSS es un lenguaje que tiene como objetivo definir el estilo de la página de manera sencilla. Todas
+                    las tareas
+                    que se llevan a cabo mediante el lenguaje CSS pueden llevarse a cabo editando el código HTML de una página, aunque
+                    hacerlo
+                    requerirá mucho más tiempo. El uso del CSS permite definir el estilo de una web en lote, aplicando un estilo
+                    determinado a
+                    todas sus páginas de manera simultánea y, a su vez, permitiendo alterar elementos en masa. Algunos ejemplos de estos
+                    elementos
+                    son las fuentes, el color de la letra, tamaño, imágenes de fondo…
+                </p>
+                <br>
+                <h2>JavaScript</h2>
+                <p>Por último, JavaScript tiene como objetivo permitir crear una página web interactiva. HTML y CSS son lenguajes
+                    estáticos que no
+                    permiten añadir elementos que interactúen con otros más allá del uso de enlaces. Usar JavaScript en el diseño de una
+                    web permite
+                    añadir botones interactivos, formularios y animaciones… Pese a esto, también permite funcionalidades esenciales como
+                    la implementación
+                    de cookies, aunque actualmente existen otros lenguajes que también permiten crearlas.
+                </p>
+                <br>
+                <p><strong>Anuncio:</strong>Si te gusta la programación de computadores, te invito a unirte al grupo de Programación
+                    UAO, para que te
+                    capacites y participes en las competencias de la RPC (Pulsa la imagen) 
+                    <br>
+                    <br>
+                    <a href="https://redprogramacioncompetitiva.com/" id="imgR" target="_blank" rel="noopener noreferrer"><img src="https://redprogramacioncompetitiva.com/images/aprendizaje_rpc.jpg" alt="Foro RPC"></a></p> 
+                    <br>  
+                    <p class="inicioR"> es posible navegar a partes especificas de esta misma pagina <a id="hj" href="#definicion"> pulse aquí para ir al encabezado inicial</a></p>       
+            </section>
+            <section>
+                <h2>Enlaces externos</h2>
+                <p class="inicio">Tambien se pueden incluir etiquetas para contenido externo. Notese la transformación del URL original
+                    al indicado en la propiedad <strong>src</strong> 
+                </p>
+                <br>
+                <div class="yt">
+                <iframe src="https://www.youtube.com/embed/Q9fwkpxr3Dw" id="yt"></iframe>  
+                </div>               
+            </section>
+            <br>
+            <h2>Tablas</h2>
+            <section class="imc">
+                <div>
+                    <p>Para crear una pagina con mas dinamismo se ha implementado el poder calcular el indice de masa corporal para 5 personas e incertarlos en la siguiente tabla, por favor ingrese: NOMBRES, PESO , ALTURA para calcular dicho IMC</p><br>
+                </div>
+
+                <div class="s">
+                    <p>NOMBRE: <input type="text" class="form-control" id="inputName" placeholder="Nombre completo"></p>
+                    <p>PESO: <input type="text" class="form-control" id="inputPeso" placeholder="Nombre completo"></p>
+                    <p>ESTATURA:<input type="text" class="form-control" id="inputEstatura" placeholder="Nombre completo"></p>
+                </div> 
+                <div class="s">
+                    <button onclick=calcularIMC()>Enviar</button>
+                    <button onclick=CalularEstadoNutricional()>IMC</button>
+                </div>
+
+               <div class="tablaDiv">
+                <table border=”1” style="text-align: center;">
+                    <caption>Indices de Masa Corporal</caption>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th colspan="2">Entradas</th>
+                            <th>IMC</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">Promedio</th>
+                            <th>21.2</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Juan Alberto</td>
+                            <td>65</td>
+                            <td>1.75</td>
+                            <td>21.2</td>                    
+                        </tr>
+                        <tr>
+                            <td>Marina</td>
+                            <td>50</td>
+                            <td>1.58</td>
+                            <td>20.0</td>                    
+                        </tr>
+                        <tr>
+                            <td>Juliana</td>
+                            <td>52</td>
+                            <td>1.6</td>
+                            <td>20.3</td>                    
+                        </tr>                             
+                        <tr>
+                            <td>Carlos</td>
+                            <td>75</td>
+                            <td>1.8</td>
+                            <td>23.1</td>                    
+                        </tr>                           
+                    </tbody>
+                </table>
+               </div>
+
+            </section>
+        </article>  
+    </main>
+    <br>
+    <footer>
+        <p> Tomado de Assembler Institite of Technology - https://assemblerinstitute.com/blog/backend-vs-frontend/</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

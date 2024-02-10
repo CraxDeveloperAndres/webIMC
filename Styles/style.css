@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+}
+
+
+header img{
+    height:80px;
+}
+
+header nav a{
+
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 20px 100px;
+    background: linear-gradient(to bottom, blue 0%, rgba(255, 255, 255, 0) 100%); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+h2.titulo1{
+    font-size: 50px
+}
+
+div.coloreado{
+    padding-top: 100px;
+}
+
+header:hover{
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.navegacion{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+
+section p{
+
+    text-align: justify;
+    margin: 0px 20px; 
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 20px;    
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    font-size: 30px;
+    
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+    font-size: 20px;
+}
+
+main img{
+    width: 200px;
+    border-width: 5px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 20px;
+    
+}
+
+iframe{
+    width: 560px;
+    height: 315px;
+    display: flex;
+    justify-content: center;
+}
+
+section .coloreado {
+    color:white;
+	text-align: justify;
+}
+
+footer {
+    margin: 20px;
+    
+    font-size: large;
+    color: white;
+}
+
+
+
+body{
+    
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background:url('https://w.forfun.com/fetch/21/215e3ddf9d2d722a16e435992d354932.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    align-items: center;
+    backdrop-filter:blur(5px);
+
+}
+
+.imc{
+    display: block;
+    justify-content: center;
+}
+
+.cosos{
+    padding-left: 50px;
+    text-align: justify;
+    color: brown;
+}
+
+#imgR{
+    display: flex;
+    justify-content: center;
+}
+
+.yt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: #fff;
+    transition: 0.5s;
+}
+
+a:hover{
+    transition: 0.5s;
+    color: blue;
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+}
+
+.inicioR{
+  
+   
+    text-align: center;
+    
+}
+
+section div.tablaDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.s {
+    margin:5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+section .s{
+    font-size: 5px;
+}
+
+div button{
+    text-align: center;
+    display: block;
+    margin: 10px;
+}
