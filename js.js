@@ -2,6 +2,10 @@ const personas = [];
 
 function mostrar(){
 
+  //document.getElementById("contentTable").innerHTML = "";
+  document.querySelector("#contentTable").insertAdjacentHTML("afterbegin","")
+ 
+ cargarDatosPersona()
  personas.forEach(persona => {
 
   var nombre = persona.nombre;
@@ -45,8 +49,6 @@ function cargarDatosPersona(){
   peso.value = "";
   estatura.value= "";
 
-  alert("se cargo la persona correctamente");
-
 }
 
 
@@ -56,7 +58,8 @@ function calcularIMC(){
   const peso = parseFloat(document.getElementById('inputPeso').value);
   const estatura = parseFloat( document.getElementById('inputEstatura').value);
 
-  const imc = peso / (estatura * estatura);
+  var imc = peso / (estatura * estatura);
+  imc = imc.toFixed(1);
   
   return imc;
 
@@ -74,17 +77,17 @@ function calularEstadoNutricional(){
 
   if(imc > 25.0){
 
-    Estado = "sobrepeso.";
+    Estado = "sobrepeso";
 
   }else{
 
     if(imc < 18.5){
 
-      Estado = "peso insuficiente." ;
+      Estado = "peso insuficiente" ;
 
     }else{
 
-      Estado = "peso saludable.";
+      Estado = "peso saludable";
 
     }
   }
