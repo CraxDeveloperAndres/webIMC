@@ -2,9 +2,8 @@ const personas = [];
 
 function mostrar(){
 
-  //document.getElementById("contentTable").innerHTML = "";
-  document.querySelector("#contentTable").insertAdjacentHTML("afterbegin","")
- 
+ document.getElementById("contentTable").innerHTML = "";
+
  cargarDatosPersona()
  personas.forEach(persona => {
 

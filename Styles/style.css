@@ -8,6 +8,9 @@
   
 }
 
+section{
+    text-shadow: 0 0 30px blue; 
+}
 
 header img{
     height:80px;
