@@ -2,28 +2,25 @@ const personas = [];
 
 function mostrar(){
 
-  console.log(personas);
+ personas.forEach(persona => {
 
-  for(i=0; i > personas.length ; i++){
+  var nombre = persona.nombre;
+  var estatura = persona.estatura;
+  var peso = persona.peso;
+  var imc = persona.IMC;
+  var estado1 = persona.estado;
 
-   var row = personas[i];
-    /* var nombre = row.nombre;
-    var estatura = row.estatura;
-    var peso = row.peso;
-    var imc = row.IMC;
-    var estado1 = row.estado;
+  // Esas comillas se usan para crear algo qur se llama templateString (creo que asi se escribe)
 
-    document.querySelector("#contentTable").insertAdjacentHTML('afterbegin', <tr>
-    <td>${nombre}</td>
-    <td>${peso}</td>
-    <td>${estatura}</td>
-    <td>${imc}</td>
-    <td>${estado1}</td>                     
-    </tr>);*/
-    console.log(row);
-
-  }
-
+  document.querySelector("#contentTable").insertAdjacentHTML('afterbegin',`<tr>
+  <td>${nombre}</td>
+  <td>${peso}</td>
+  <td>${estatura}</td>
+  <td>${imc}</td>
+  <td>${estado1}</td>                     
+  </tr>`);
+ });
+  
 }
 
 function cargarDatosPersona(){
@@ -34,7 +31,7 @@ function cargarDatosPersona(){
   var  imc = calcularIMC();
   var Estado = calularEstadoNutricional()
 
-  const persona ={
+  const persona = {
    nombre: nombre.value,
    peso: parseFloat(peso.value) ,
    estatura: parseFloat(estatura.value),
@@ -77,17 +74,17 @@ function calularEstadoNutricional(){
 
   if(imc > 25.0){
 
-    Estado = "se encuentra dentro del rango de sobrepeso.";
+    Estado = "sobrepeso.";
 
   }else{
 
     if(imc < 18.5){
 
-      Estado = "se encuentra dentro del rango de peso insuficiente." ;
+      Estado = "peso insuficiente." ;
 
     }else{
 
-      Estado = "se encuentra dentro del rango de peso normal o saludable.";
+      Estado = "peso saludable.";
 
     }
   }
