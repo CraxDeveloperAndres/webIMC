@@ -1,28 +1,98 @@
+const personas = [];
+
+function mostrar(){
+
+  console.log(personas);
+
+  for(i=0; i > personas.length ; i++){
+
+   var row = personas[i];
+    /* var nombre = row.nombre;
+    var estatura = row.estatura;
+    var peso = row.peso;
+    var imc = row.IMC;
+    var estado1 = row.estado;
+
+    document.querySelector("#contentTable").insertAdjacentHTML('afterbegin', <tr>
+    <td>${nombre}</td>
+    <td>${peso}</td>
+    <td>${estatura}</td>
+    <td>${imc}</td>
+    <td>${estado1}</td>                     
+    </tr>);*/
+    console.log(row);
+
+  }
+
+}
+
+function cargarDatosPersona(){
+  
+  const nombre = document.getElementById('inputName');
+  const peso = document.getElementById('inputPeso');
+  const estatura = document.getElementById('inputEstatura');
+  var  imc = calcularIMC();
+  var Estado = calularEstadoNutricional()
+
+  const persona ={
+   nombre: nombre.value,
+   peso: parseFloat(peso.value) ,
+   estatura: parseFloat(estatura.value),
+   IMC:imc,
+   estado: Estado
+  }
+
+  personas.push(persona);
+
+  nombre.value = "";
+  peso.value = "";
+  estatura.value= "";
+
+  alert("se cargo la persona correctamente");
+
+}
 
 
 function calcularIMC(){
 
   const nombre = document.getElementById('inputName').value;
   const peso = parseFloat(document.getElementById('inputPeso').value);
-  const estatura =parseFloat( document.getElementById('inputEstatura').value);
+  const estatura = parseFloat( document.getElementById('inputEstatura').value);
 
   const imc = peso / (estatura * estatura);
-
-  alert(imc);
+  
+  return imc;
 
 }
 
-function CalularEstadoNutricional(imc){
+function calularEstadoNutricional(){
 
-    /*Si su IMC es menos de 18.5, se encuentra dentro del rango de peso insuficiente. 
-    Si su IMC es entre 18.5 y 24.9, se encuentra dentro del rango de peso normal o saludable. 
-    Si su IMC es entre 25.0 y 29.9, se encuentra dentro del rango de sobrepeso.*/
+  /*Si su IMC es menos de 18.5, se encuentra dentro del rango de peso insuficiente. 
+  Si su IMC es entre 18.5 y 24.9, se encuentra dentro del rango de peso normal o saludable. 
+  Si su IMC es entre 25.0 y 29.9, se encuentra dentro del rango de sobrepeso.*/
 
-    let CalularEstadoNutricional = "Aun no ha ingresado un imc valido";
+  var imc = calcularIMC();
 
-    imc < 18.5? CalularEstadoNutricional = "se encuentra dentro del rango de peso insuficiente." : CalularEstadoNutricional = "se encuentra dentro del rango de peso normal o saludable.";
-    imc >= 18.5 && imc <= 24.9? CalularEstadoNutricional="se encuentra dentro del rango de peso normal o saludable." : CalularEstadoNutricional=" se encuentra dentro del rango de sobrepeso.";
-   
-    alert(CalularEstadoNutricional);
+  var Estado ="";
+
+  if(imc > 25.0){
+
+    Estado = "se encuentra dentro del rango de sobrepeso.";
+
+  }else{
+
+    if(imc < 18.5){
+
+      Estado = "se encuentra dentro del rango de peso insuficiente." ;
+
+    }else{
+
+      Estado = "se encuentra dentro del rango de peso normal o saludable.";
+
+    }
+  }
+
+  return Estado;
+
 }
 

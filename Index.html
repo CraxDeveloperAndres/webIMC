@@ -107,8 +107,8 @@
                     <p>ESTATURA:<input type="text" class="form-control" id="inputEstatura" placeholder="Nombre completo"></p>
                 </div> 
                 <div class="s">
-                    <button onclick=calcularIMC()>Enviar</button>
-                    <button onclick=CalularEstadoNutricional()>IMC</button>
+                    <button onclick=mostrar()>Mostrar datos</button>
+                    <button onclick=cargarDatosPersona()>Almacenar datos</button>
                 </div>
 
                <div class="tablaDiv">
@@ -119,6 +119,7 @@
                             <th>Nombre</th>
                             <th colspan="2">Entradas</th>
                             <th>IMC</th>
+                            <th>Estado</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -127,30 +128,34 @@
                             <th>21.2</th>
                         </tr>
                     </tfoot>
-                    <tbody>
+                    <tbody id="contentTable">
                         <tr>
                             <td>Juan Alberto</td>
                             <td>65</td>
                             <td>1.75</td>
-                            <td>21.2</td>                    
+                            <td>21.2</td>
+                            <td>sobrepeso</td>                     
                         </tr>
                         <tr>
                             <td>Marina</td>
                             <td>50</td>
                             <td>1.58</td>
-                            <td>20.0</td>                    
+                            <td>20.0</td>  
+                            <td>sobrepeso</td>                   
                         </tr>
                         <tr>
                             <td>Juliana</td>
                             <td>52</td>
                             <td>1.6</td>
-                            <td>20.3</td>                    
+                            <td>20.3</td>  
+                            <td>sobrepeso</td>                   
                         </tr>                             
                         <tr>
                             <td>Carlos</td>
                             <td>75</td>
                             <td>1.8</td>
-                            <td>23.1</td>                    
+                            <td>23.1</td>
+                            <td>sobrepeso</td>                     
                         </tr>                           
                     </tbody>
                 </table>
